@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Coming Soon 6</title>
+	<title>News on C Live Streaming</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -19,7 +19,9 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-<!--===============================================================================================-->
+<!--====================================== VIDEO.JS ===============================================-->
+	<link href="https://vjs.zencdn.net/7.6.6/video-js.css" rel="stylesheet" />
+	<script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
 </head>
 <body>
 	
@@ -48,14 +50,23 @@
 		<div class="flex-w flex-sa p-r-200 respon1">
 			<div class="p-t-34 p-b-60 respon3">
 				<p class="l1-txt1 p-b-10 respon2">
-					Our website is
+					News On C
 				</p>
 
 				<h3 class="l1-txt2 p-b-45 respon2 respon4">
-					Coming Soon
+					Live Stream
 				</h3>
 
-				<div class="cd100"></div>
+				<!-- <div class="cd100"></div> -->
+				<video id="my-video" class="video-js" controls autoplay preload="auto" width="640" height="264" poster="MY_VIDEO_POSTER.jpg"
+					data-setup="{}">
+					<source src="https://live.newsonc.com/hls/abcd1234.m3u8" type="application/x-mpegURL">
+					<p class="vjs-no-js">
+						To view this video please enable JavaScript, and consider upgrading to a
+						web browser that
+						<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+					</p>
+				</video>
 
 			</div>
 
@@ -100,28 +111,9 @@
 <!--===============================================================================================-->
 	<script src="vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
-	<script src="vendor/countdowntime/flipclock.min.js"></script>
-	<script src="vendor/countdowntime/moment.min.js"></script>
-	<script src="vendor/countdowntime/moment-timezone.min.js"></script>
-	<script src="vendor/countdowntime/moment-timezone-with-data.min.js"></script>
-	<script src="vendor/countdowntime/countdowntime.js"></script>
-	<script>
-		$('.cd100').countdown100({
-			/*Set Endtime here*/
-			/*Endtime must be > current time*/
-			endtimeYear: 0,
-			endtimeMonth: 0,
-			endtimeDate: 35,
-			endtimeHours: 18,
-			endtimeMinutes: 0,
-			endtimeSeconds: 0,
-			timeZone: "" 
-			// ex:  timeZone: "America/New_York"
-			//go to " http://momentjs.com/timezone/ " to get timezone
-		});
 
-		
-	</script>
+	<script src="https://vjs.zencdn.net/7.6.6/video.js"></script>
+
 <!--===============================================================================================-->
 	<script src="vendor/tilt/tilt.jquery.min.js"></script>
 	<script >
